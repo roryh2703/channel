@@ -18,8 +18,8 @@ FoamFile
 
 libs (
         "libforces.so"
-        "/usr/not-backed-up/cfd/fixedMeanVal/libfixedMeanValue.so"
-        "/nobackup/scrh/libraries/libfixedMeanValue.so"
+        //"/usr/not-backed-up/cfd/fixedMeanVal/libfixedMeanValue.so"
+        //"/nobackup/scrh/libraries/libfixedMeanValue.so"
  );  		 
 
 
@@ -31,7 +31,7 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         5;
+endTime         50;
 
 deltaT          1e-6;
 

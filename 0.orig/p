@@ -27,9 +27,8 @@ boundaryField
     }
     OUT
     {
-        type            fixedMeanValue;
+        type            fixedValue;
         value           uniform 0;
-	meanValue       0;
     }
     SYM1
     {
