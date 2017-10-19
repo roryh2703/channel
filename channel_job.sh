@@ -8,7 +8,7 @@
 #$ -M scrh@leeds.ac.uk
 
 #    Set time 
-#$ -l h_rt=2:00:00       # time needed
+#$ -l h_rt=1:00:00       # time needed
 
 #    How many nodes, how many processors per node (24 cores per node)
 #$ -l nodes=1,ppn=24 

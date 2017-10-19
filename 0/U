@@ -9,30 +9,31 @@ FoamFile
 {
     version     2.0;
     format      ascii;
-    class       volScalarField;
+    class       volVectorField;
     location    "1";
-    object      k;
+    object      U;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 2 -2 0 0 0 0];
+dimensions      [0 1 -1 0 0 0 0];
 
-internalField   uniform 5.70375e-04;     #corresponds to 0.1% intensity
+internalField   uniform (0 0 0);
 
 boundaryField
 {
     IN
     {
-        type                mapped;
-        value               uniform 5.70375e-04;
+        type             mapped;
+        value           uniform (0.195 0 0);
         interpolationScheme cell;
-        setAverage          false;
-        average             5.70375e-04;
+        setAverage          true;
+        average             (0.195 0 0);
     }
     OUT
     {
-        type            inletOutlet;
-        inletValue      $internalField;
+       type             inletOutlet;
+       inletValue       uniform (0 0 0);
+       inlet            uniform (0 0 0);
     }
     SYM1
     {
@@ -42,11 +43,11 @@ boundaryField
     {
         type            slip;
     }
-    periodic1
+    PER1
     {
         type            slip;
     }
-    periodic2
+    PER2
     {
         type            slip;
     }
